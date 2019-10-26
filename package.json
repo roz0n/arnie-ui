@@ -12,8 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "@storybook/cli": "^5.2.5",
-    "init": "^0.1.2",
-    "react-dom": "^16.11.0",
     "sb": "^5.1.11"
   },
   "devDependencies": {
@@ -22,7 +20,7 @@
     "@storybook/addon-docs": "^5.2.5",
     "@storybook/react": "^5.2.5",
     "babel-loader": "^8.0.6",
-    "install": "^0.13.0",
-    "react": "^16.11.0"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }
