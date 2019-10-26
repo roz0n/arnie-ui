@@ -1,0 +1,43 @@
+.accordion-container {
+  transition: all .25s;
+}
+
+.accordion-container .heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 21px;
+  user-select: none;
+}
+
+.accordion-container .heading .icon {
+  line-height: 1rem;
+  margin-right: .25rem;
+  transition: all .25s;
+  font-size: 1rem;
+}
+
+.accordion-container .heading .icon.open {
+  transform: rotate(90deg);
+}
+
+
+.accordion-container .heading:hover {
+  cursor: pointer;
+}
+
+.accordion-container .content {
+  margin: 1rem 0 0 0;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .25s;
+}
+
+.accordion-container .content.open {
+  overflow: visible;
+  opacity: 1;
+  height: 100%;
+}

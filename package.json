@@ -1,0 +1,26 @@
+{
+  "name": "arnie-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@storybook/cli": "^5.2.5",
+    "init": "^0.1.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "sb": "^5.1.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@storybook/react": "^5.2.5",
+    "babel-loader": "^8.0.6",
+    "install": "^0.13.0"
+  }
+}

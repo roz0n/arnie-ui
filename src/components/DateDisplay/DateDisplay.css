@@ -1,0 +1,7 @@
+.date-display-container .date {
+  font-size: .7rem;
+  text-transform: uppercase;
+  display: block;
+  color: #979797;
+  margin: 0 0 1rem 0;
+}
