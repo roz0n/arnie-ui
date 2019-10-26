@@ -5,7 +5,7 @@ import arnieUI from "./arnieUI";
 
 addParameters({
   options: {
-    theme: themes.dark
+    // theme: themes.dark
   }
 });
 

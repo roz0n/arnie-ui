@@ -5,8 +5,7 @@ Some components I find myself frequently reusing...
 Soon..
 
 ## Run the app
-`npm i`
-`npm run storybook`
+`npm i && run storybook`
 
 ## License
 MIT

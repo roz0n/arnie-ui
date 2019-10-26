@@ -16,6 +16,7 @@ class Accordion extends Component {
   };
 
   toggle = () => {
+    this.props.onClick();
     this.setState({ isExpanded: !this.state.isExpanded });
   };
 
