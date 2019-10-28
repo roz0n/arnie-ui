@@ -1,13 +1,33 @@
 .Dropdown-container {
-  color: "lime" !important;
-} 
+  background-color: lime !important;
+  border-radius: 2px;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.Dropdown-item-container {
+  height: 100%;
+  background-image: white;
+  color: black;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.25s;
+  box-sizing: border-box;
+  padding-left: 0.75rem;
+  padding-right: 0.5rem;
+  border-top: 0.25px solid #e1e1e1;
+}
 
 .Dropdown-item-container.inactive {
   opacity: 0.9;
 }
 
 .Dropdown-item-container:hover {
-  transition: all .25s;
+  transition: all 0.25s;
   cursor: pointer;
   opacity: 1;
 }

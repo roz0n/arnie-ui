@@ -2,14 +2,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.tabs-header {
+.Tabs-header {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
 }
 
-.tabs-header .tab {
+.Tabs-header .Tab {
   margin: 0 1rem;
   font-weight: bold;
   font-size: 1rem;
@@ -20,16 +20,16 @@
   border-bottom: 2px solid transparent;
 }
 
-.tabs-header .tab:first-child {
+.Tabs-header .Tab:first-child {
   margin-left: 0px;
 }
 
-.tabs-header .tab:hover {
+.Tabs-header .Tab:hover {
   cursor: pointer;
   opacity: 0.75;
 }
 
-.tabs-header .tab.active {
+.Tabs-header .Tab.active {
   opacity: 1;
   border-bottom: 2px solid white;
   text-decoration: underline;

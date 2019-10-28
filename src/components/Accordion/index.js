@@ -14,13 +14,19 @@ const Accordion = props => {
   const expandedClass = isExpanded ? "open" : "closed";
 
   return (
-    <article className="accordion-container">
-      <section className="heading" onClick={() => setExpanded(!isExpanded)}>
-        <i className={`material-icons icon ${expandedClass}`}>></i>
+    <article className="Accordion-container">
+      <section
+        className="Accordion-heading"
+        onClick={() => setExpanded(!isExpanded)}
+      >
+        <i className={`icon ${expandedClass}`}>&#9658;</i>
         {heading}
       </section>
 
-      <section className={`content ${expandedClass}`} ref={contentArea}>
+      <section
+        className={`Accordion-content ${expandedClass}`}
+        ref={contentArea}
+      >
         {isExpanded && !contentAsChildren && content}
         {isExpanded && contentAsChildren && children}
         {!contentAsChildren && children}

@@ -1,8 +1,9 @@
-.accordion-container {
+.Accordion-container {
   transition: all .25s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.accordion-container .heading {
+.Accordion-container .Accordion-heading {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,23 +13,23 @@
   user-select: none;
 }
 
-.accordion-container .heading .icon {
+.Accordion-container .Accordion-heading .icon {
   line-height: 1rem;
   margin-right: .25rem;
   transition: all .25s;
   font-size: 1rem;
 }
 
-.accordion-container .heading .icon.open {
+.Accordion-container .Accordion-heading .icon.open {
   transform: rotate(90deg);
 }
 
 
-.accordion-container .heading:hover {
+.Accordion-container .Accordion-heading:hover {
   cursor: pointer;
 }
 
-.accordion-container .content {
+.Accordion-container .Accordion-content {
   margin: 1rem 0 0 0;
   height: 0px;
   overflow: hidden;
@@ -36,7 +37,7 @@
   transition: all .25s;
 }
 
-.accordion-container .content.open {
+.Accordion-container .Accordion-content.open {
   overflow: visible;
   opacity: 1;
   height: 100%;

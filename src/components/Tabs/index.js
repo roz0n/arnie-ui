@@ -7,17 +7,20 @@ const Tabs = props => {
 
   return (
     <article className="Tabs-container">
-      <article className="tabs-header">
+      <section className="Tabs-header">
         {tabs.map(tab => (
           <div
-            className={tab.id === activeTab ? "tab active" : "tab"}
+            className={tab.id === activeTab ? "Tab active" : "Tab"}
             onClick={e => setActiveTab(tab.id, e)}
           >
             {tab.title}
           </div>
         ))}
-      </article>
-      <article>{tabs[activeTab].component}</article>
+      </section>
+
+      <section className="Tabs-content">
+        <div>{tabs[activeTab].component}</div>
+      </section>
     </article>
   );
 };
