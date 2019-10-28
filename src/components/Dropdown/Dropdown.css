@@ -1,14 +1,14 @@
 .Dropdown-container {
-  background-color: lime !important;
   border-radius: 2px;
   transition: all 0.2s;
   font-size: 14px;
   font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Dropdown-item-container {
   height: 100%;
-  background-image: white;
+  background-color: #f1f1f1;
   color: black;
   position: relative;
   z-index: 100;
@@ -19,7 +19,8 @@
   box-sizing: border-box;
   padding-left: 0.75rem;
   padding-right: 0.5rem;
-  border-top: 0.25px solid #e1e1e1;
+  border: 0.25px solid #e1e1e1;
+  box-sizing: border-box;
 }
 
 .Dropdown-item-container.inactive {
