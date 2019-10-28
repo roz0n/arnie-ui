@@ -2,8 +2,6 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 import Accordion from "./";
 
-export default { title: "Accordion" };
-
 export const withChildren = () => (
   <Accordion
     heading={"Content"}
@@ -15,6 +13,4 @@ export const withChildren = () => (
   </Accordion>
 );
 
-export const withHeading = () => (
-  <Accordion heading={"Heading"}>{<div>Content?</div>}</Accordion>
-);
+export default { title: "Accordion" };

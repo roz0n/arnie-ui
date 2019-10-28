@@ -1,13 +1,9 @@
 import React from "react";
 import { Dropdown } from "./";
 
+export const withItems = () => {
+  const clubs = ["Real Madrid CF", "FC Barcelona", "Manchester United"];
+  return <Dropdown items={clubs} />;
+};
+
 export default { title: "Dropdown" };
-
-const spanishClubs = [
-  "Real Madrid CF",
-  "FC Barcelona",
-  "Atletico Madrid CF",
-  "Sevilla CF"
-];
-
-export const withItems = () => <Dropdown items={spanishClubs} />;

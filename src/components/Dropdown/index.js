@@ -2,9 +2,21 @@ import "./Dropdown.css";
 import React, { useState } from "react";
 
 const Dropdown = props => {
-  const { items = [] } = props;
+  const { items: menuItems = [] } = props;
+  const [items, setItems] = useState(menuItems);
   const [activeItem, setActiveItem] = useState(0);
   const [isMenuOpen, openMenu] = useState(false);
+
+  const setItem = index => {
+    const currentItems = [...items];
+    const newActiveItem = currentItems[index];
+
+    currentItems.splice(index, 1);
+    currentItems.unshift(newActiveItem);
+
+    setItems(currentItems);
+    setActiveItem(index);
+  };
 
   // TODO: Refactor these styles
   const conditionalStyles = {
@@ -24,7 +36,7 @@ const Dropdown = props => {
           key={`Dropdown-${i}`}
           index={i}
           label={option}
-          setActive={setActiveItem}
+          setActive={setItem}
           isActive={activeItem === i}
           isMenuOpen={isMenuOpen}
         />
