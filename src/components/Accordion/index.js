@@ -1,63 +1,33 @@
 import "./Accordion.css";
-import React, { Component } from "react";
+import React, { useState, useRef } from "react";
 
-class Accordion extends Component {
-  state = {
-    isExpanded: false,
-    ref: React.createRef()
-  };
+const Accordion = props => {
+  const {
+    heading = "Tab",
+    children,
+    content,
+    contentAsChildren = true
+  } = props;
 
-  open = () => {
-    this.setState({ isExpanded: true });
-  };
+  const [isExpanded, setExpanded] = useState(false);
+  const contentArea = useRef(null);
+  const expandedClass = isExpanded ? "open" : "closed";
 
-  close = () => {
-    this.setState({ isExpanded: false });
-  };
+  return (
+    <article className="accordion-container">
+      <section className="heading" onClick={() => setExpanded(!isExpanded)}>
+        <i className={`material-icons icon ${expandedClass}`}>></i>
+        {heading}
+      </section>
 
-  toggle = () => {
-    this.props.onClick();
-    this.setState({ isExpanded: !this.state.isExpanded });
-  };
-
-  setInitialState = state => {
-    switch (state) {
-      case "open":
-        this.open();
-        break;
-      case "closed":
-        this.close();
-        break;
-      default:
-        break;
-    }
-  };
-
-  componentDidMount() {
-    const { initialState } = this.props;
-    this.setInitialState(initialState);
-  }
-
-  render() {
-    const { heading, children, content, contentAsChildren } = this.props;
-    const expandedClass = this.isExpanded ? "open" : "closed";
-
-    return (
-      <article className="accordion-container">
-        <section className="heading" onClick={this.toggle}>
-          <i className={`material-icons icon ${expandedClass}`}>></i>
-          {heading}
-        </section>
-
-        <section className={`content ${expandedClass}`} ref={this.ref}>
-          {this.isExpanded && !contentAsChildren && content}
-          {this.isExpanded && contentAsChildren && children}
-          {/* {!contentAsChildren && children}
-          {contentAsChildren && contentAsChildren} */}
-        </section>
-      </article>
-    );
-  }
-}
+      <section className={`content ${expandedClass}`} ref={contentArea}>
+        {isExpanded && !contentAsChildren && content}
+        {isExpanded && contentAsChildren && children}
+        {!contentAsChildren && children}
+        {contentAsChildren && contentAsChildren}
+      </section>
+    </article>
+  );
+};
 
 export default Accordion;
