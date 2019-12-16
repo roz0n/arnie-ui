@@ -30,7 +30,7 @@ const Accordion = props => {
         {isExpanded && !contentAsChildren && content}
         {isExpanded && contentAsChildren && children}
         {!contentAsChildren && children}
-        {contentAsChildren && contentAsChildren}
+        {contentAsChildren}
       </section>
     </article>
   );
