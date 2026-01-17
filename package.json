@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@storybook/cli": "^5.2.5",
+    "@storybook/cli": "^10.1.11",
     "sb": "^5.1.11"
   },
   "devDependencies": {
